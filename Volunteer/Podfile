@@ -9,6 +9,8 @@ target 'Volunteer' do
   pod 'Parse'
   pod 'AlamofireImage'
   pod 'SideMenu'
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Functions'
 
   target 'VolunteerTests' do
     inherit! :search_paths
@@ -16,6 +18,8 @@ target 'Volunteer' do
     pod 'Parse'
     pod 'AlamofireImage'
     pod 'SideMenu'
+    pod 'Firebase/Analytics'
+    pod 'Firebase/Functions'
   end
 
   target 'VolunteerUITests' do
@@ -23,6 +27,8 @@ target 'Volunteer' do
     pod 'Parse'
     pod 'AlamofireImage'
     pod 'SideMenu'
+    pod 'Firebase/Analytics'
+    pod 'Firebase/Functions'
   end
 
 end
