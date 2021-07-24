@@ -7,6 +7,7 @@
 
 import UIKit
 import Parse
+import Firebase
 
 let primaryColor = UIColor(red: 191/255, green: 238/255, blue: 255/255, alpha: 1)
 let secondaryColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
@@ -15,6 +16,11 @@ let secondaryColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha:
 class AppDelegate: UIResponder, UIApplicationDelegate{
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        //Connect to firebase
+        
+        FirebaseApp.configure()
+        
         
         // Settings to connect to the Back4App Servers
         

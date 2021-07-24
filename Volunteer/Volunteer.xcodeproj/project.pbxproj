@@ -31,6 +31,7 @@
 		03F2FBC52602FD7A008748E1 /* PrivacyPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F2FBC32602FD7A008748E1 /* PrivacyPolicyViewController.swift */; };
 		03F2FBC62602FD7A008748E1 /* ToSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F2FBC42602FD7A008748E1 /* ToSViewController.swift */; };
 		03F2FBD826030447008748E1 /* Events.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03F2FBD726030447008748E1 /* Events.storyboard */; };
+		1735004926ABD20700CDA989 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1735004826ABD20700CDA989 /* GoogleService-Info.plist */; };
 		3172CA3F8203E80A15E3723B /* Pods_VolunteerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 925FE17E549E5DEACAABA95C /* Pods_VolunteerTests.framework */; };
 		5F96A54866D548882CF2E6E7 /* Pods_Volunteer_VolunteerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B13A518CCA7D53725E1CFA0C /* Pods_Volunteer_VolunteerUITests.framework */; };
 		7A893BB9262BA33C006EC6EC /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03A37411260AED200011DC21 /* Profile.storyboard */; };
@@ -112,6 +113,7 @@
 		03F2FBC42602FD7A008748E1 /* ToSViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToSViewController.swift; sourceTree = "<group>"; };
 		03F2FBD726030447008748E1 /* Events.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Events.storyboard; sourceTree = "<group>"; };
 		0465753C1758BAB82A3169F4 /* Pods-Volunteer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Volunteer.release.xcconfig"; path = "Target Support Files/Pods-Volunteer/Pods-Volunteer.release.xcconfig"; sourceTree = "<group>"; };
+		1735004826ABD20700CDA989 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1C361E8663E17DB86252A39F /* Pods-Volunteer-VolunteerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Volunteer-VolunteerUITests.release.xcconfig"; path = "Target Support Files/Pods-Volunteer-VolunteerUITests/Pods-Volunteer-VolunteerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5BBF486254AF5EDB4FE84A37 /* Pods-Volunteer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Volunteer.debug.xcconfig"; path = "Target Support Files/Pods-Volunteer/Pods-Volunteer.debug.xcconfig"; sourceTree = "<group>"; };
 		66D23A9C3CF7DBB2AB963756 /* Pods-VolunteerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VolunteerTests.release.xcconfig"; path = "Target Support Files/Pods-VolunteerTests/Pods-VolunteerTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -305,6 +307,7 @@
 				03A373FF260AE9430011DC21 /* Home.storyboard */,
 				03F2FBD726030447008748E1 /* Events.storyboard */,
 				03A37411260AED200011DC21 /* Profile.storyboard */,
+				1735004826ABD20700CDA989 /* GoogleService-Info.plist */,
 				03A37404260AEA720011DC21 /* Search.storyboard */,
 				03A37419260AEDA30011DC21 /* Settings.storyboard */,
 				03F2FBAE2602FD13008748E1 /* LegalDocs.storyboard */,
@@ -497,6 +500,7 @@
 				7A893BB9262BA33C006EC6EC /* Profile.storyboard in Resources */,
 				98CC89F125DCFCA5008E4A7B /* Assets.xcassets in Resources */,
 				03F2FBD826030447008748E1 /* Events.storyboard in Resources */,
+				1735004926ABD20700CDA989 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -870,7 +874,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.StephenBaity;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Voca;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -890,7 +894,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.StephenBaity;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Voca;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

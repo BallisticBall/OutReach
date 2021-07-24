@@ -8,6 +8,8 @@
 import UIKit
 import Parse
 import SideMenu
+import Firebase
+import FirebaseAuth
 
 protocol MenuControllerDelegate {
     func didSelectMenuItem(named: SideMenuItem)
@@ -67,6 +69,20 @@ class HomeViewController: UIViewController, MenuControllerDelegate {
         self.present(viewController, animated: true, completion: nil)
     }
     
+    func logout(){
+        let firebaseAuth = Auth.auth()
+        do {
+          try firebaseAuth.signOut()
+        } catch let signOutError as NSError {
+              print("Error signing out: %@", signOutError)
+            let alert = UIAlertController(title: "Error Logging Out", message: signOutError.localizedDescription, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+                print(signOutError)
+            }))
+            self.present(alert, animated: true)
+        }
+    }
+    
     func didSelectMenuItem(named: SideMenuItem) {
         sideMenu?.dismiss(animated: true, completion: nil)
             
@@ -94,19 +110,8 @@ class HomeViewController: UIViewController, MenuControllerDelegate {
                 performSegue(withIdentifier: "settingsSegue", sender: nil)
                 
             case .logOut:
-                PFUser.logOutInBackground { (error: Error?) in
-                    if (error == nil){
-                        self.loadLoginScreen()
-                    }else{
-                       let alert = UIAlertController(title: "Error Logging Out", message: error?.localizedDescription, preferredStyle: .alert)
-                       alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
-                           print(error.debugDescription)
-                       }))
-                       self.present(alert, animated: true)
-                   }
-
-               }
-                loadLoginScreen()
+                self.logout()
+                
         }
     }
 }
