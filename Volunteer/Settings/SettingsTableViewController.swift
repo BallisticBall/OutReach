@@ -8,12 +8,14 @@
 import UIKit
 import Parse
 import FirebaseAuth
+import FirebaseDatabase
 
 class SettingsTableViewController: UITableViewController {
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
 
     }
     

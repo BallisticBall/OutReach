@@ -44,5 +44,16 @@ target 'Volunteer' do
     pod 'Firebase/Storage'
     
   end
+  
+  
+  target 'PlaygroundFramework' do
+    # Pods for testing
+    pod 'Firebase/Analytics'
+    pod 'Firebase/Functions'
+    pod 'Firebase/Auth'
+    pod 'Firebase/Database'
+    pod 'Firebase/Storage'
+    
+  end
 
 end

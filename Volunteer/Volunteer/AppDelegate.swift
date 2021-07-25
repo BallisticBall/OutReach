@@ -20,7 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
         //Connect to firebase
         
         FirebaseApp.configure()
-        
+        let populate = Populate()
+        populate.test()
         
         // Settings to connect to the Back4App Servers
         
@@ -30,7 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
             $0.server = "https://parseapi.back4app.com"
         }
         Parse.initialize(with: configuration)
-        
+
         // Configuration of the Parse
         saveInstallationObject()
         

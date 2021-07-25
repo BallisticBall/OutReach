@@ -22,8 +22,11 @@ class UpdateEmailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         userEmail()
     }
+    
+    
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
@@ -36,7 +39,8 @@ class UpdateEmailViewController: UIViewController {
         let currentUser = Auth.auth().currentUser
         let userEmail = currentUser?.email
         self.currentEmail?.text = userEmail
-        print(userEmail)
+        print(userEmail!)
+        
     }
     
     @IBAction func submitForm(_ sender: Any) {

@@ -64,8 +64,19 @@ class CreateProfileAllViewController: UIViewController, UITextFieldDelegate, UII
     var flag11 = false
     
    //var buttonEducationLevel = dropDownBtn()
-    
+    let populate = Populate()
+    func fetchTags(){
+        let ref = Database.database().reference()
+        let userRef = ref.child("interest-tags")
+        populate.fetchData(dbref:userRef) { tags in
+            for tag in tags{
+                print("tag_id",tag.key)
+                print("tag_name",tag.value)
+            }
+        }
+    }
     override func viewDidLoad() {
+        fetchTags()
         view.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
         
         introTextField!.layer.borderWidth = 1
@@ -212,6 +223,8 @@ class CreateProfileAllViewController: UIViewController, UITextFieldDelegate, UII
         dismiss(animated: true, completion: nil)
     }
 
+    
+    
 
     //interest tag buttons
     @IBAction func animalCheckboxButton(_ sender: UIButton) {

@@ -29,7 +29,7 @@ enum SideMenuItem: String, CaseIterable {
 
 class HomeViewController: UIViewController, MenuControllerDelegate {
     private var sideMenu: SideMenuNavigationController?
-    
+
     private let profileController = MainProfileViewController()
     //add other controllers later
     
@@ -46,6 +46,7 @@ class HomeViewController: UIViewController, MenuControllerDelegate {
         SideMenuManager.default.addPanGestureToPresent(toView: view)
         
         addChildControllers()
+
     }
     
     private func addChildControllers() {
@@ -61,6 +62,8 @@ class HomeViewController: UIViewController, MenuControllerDelegate {
     
     @IBAction func didTapMenu() {
         present(sideMenu!, animated: true)
+        
+
     }
     
     func loadLoginScreen(){
@@ -85,7 +88,7 @@ class HomeViewController: UIViewController, MenuControllerDelegate {
     
     func didSelectMenuItem(named: SideMenuItem) {
         sideMenu?.dismiss(animated: true, completion: nil)
-            
+        performSegue(withIdentifier: "CheckBoxSegue", sender: nil)
         title = named.rawValue
         switch named {
             case .user:

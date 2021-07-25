@@ -46,6 +46,10 @@ class LoginViewController:UIViewController, UITextFieldDelegate {
 		  // Do stuff with the user
             print("\(String(currentUser!.email!))Already logged in")
 			self.performSegue(withIdentifier: "LoginSegue", sender: self)
+            
+//            Enable to Test CheckBoxPage
+//            self.performSegue(withIdentifier: "CheckBoxSegue", sender: self)
+
 		} else {
 			print("not logged in")
 		}
@@ -96,6 +100,7 @@ class LoginViewController:UIViewController, UITextFieldDelegate {
             } else {
               print("User Log In successfully")
                 self.performSegue(withIdentifier: "LoginSegue", sender: self)
+                
             }
         }
 }
