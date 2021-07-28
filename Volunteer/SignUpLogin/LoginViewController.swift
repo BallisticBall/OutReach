@@ -8,6 +8,8 @@
 import Foundation
 import UIKit
 import Parse
+import Firebase
+import FirebaseAuth
 
 
 class LoginViewController:UIViewController, UITextFieldDelegate {
@@ -37,11 +39,17 @@ class LoginViewController:UIViewController, UITextFieldDelegate {
 	
 	override func viewDidAppear(_ animated: Bool) {
 		//Check the user is already logged in
-		let currentUser = PFUser.current()
+        let currentUser = Auth.auth().currentUser
 		if currentUser != nil {
+            print(currentUser!)
+
 		  // Do stuff with the user
-            print("\(String(describing: currentUser!.username))Already logged in")
+            print("\(String(currentUser!.email!))Already logged in")
 			self.performSegue(withIdentifier: "LoginSegue", sender: self)
+            
+//            Enable to Test CheckBoxPage
+//            self.performSegue(withIdentifier: "CheckBoxSegue", sender: self)
+
 		} else {
 			print("not logged in")
 		}
@@ -50,20 +58,51 @@ class LoginViewController:UIViewController, UITextFieldDelegate {
     // User Sign-in Validation
     @IBAction func onSignIn(_ sender: Any) {
 		let username = emailField.text!
+        let email = username
 		let password = passwordField.text!
 		
-		PFUser.logInWithUsername(inBackground: username, password: password) { (user, error) in
-			if user != nil && error == nil {
+//		PFUser.logInWithUsername(inBackground: username, password: password) { (user, error) in
+//			if user != nil && error == nil {
+//                self.performSegue(withIdentifier: "LoginSegue", sender: self)
+//                print(user?.description)
+//			} else {
+//				let alert = UIAlertController(title: "Oops!", message: error?.localizedDescription, preferredStyle: .alert)
+//				alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+//					print(error.debugDescription)
+//				}))
+//				self.present(alert, animated: true)
+//			}
+//		}
+        
+        
+        Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
+            if let error = error as? NSError {
+              var error_message = "blank"
+
+              switch AuthErrorCode(rawValue: error.code) {
+              
+              case .operationNotAllowed:
+                error_message = "email and password accounts are not enabled. Enable them in the Auth section of the Firebase console."
+              case .userDisabled:
+                error_message = "The user account has been disabled by an administrator"
+              case .wrongPassword:
+                error_message = "The password is invalid or the user does not have a password."
+              case .invalidEmail:
+                error_message = "The email address is malformed."
+              default:
+                error_message = error.localizedDescription
+              }
+                let alert = UIAlertController(title: "Oops!", message: error_message, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+                    print(error.debugDescription)
+                }))
+                self.present(alert, animated: true)
+            } else {
+              print("User Log In successfully")
                 self.performSegue(withIdentifier: "LoginSegue", sender: self)
-                print(user?.description)
-			} else {
-				let alert = UIAlertController(title: "Oops!", message: error?.localizedDescription, preferredStyle: .alert)
-				alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
-					print(error.debugDescription)
-				}))
-				self.present(alert, animated: true)
-			}
-		}
+                
+            }
+        }
 }
 	
     

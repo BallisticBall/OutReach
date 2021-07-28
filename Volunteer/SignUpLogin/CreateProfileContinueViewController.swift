@@ -8,6 +8,10 @@
 import Foundation
 import UIKit
 import Parse
+import Firebase
+import FirebaseDatabase
+import FirebaseAuth
+
 
 class CreateProfileViewContinueController:UIViewController, UITextFieldDelegate {
     
@@ -23,21 +27,35 @@ class CreateProfileViewContinueController:UIViewController, UITextFieldDelegate 
     }
     
     @IBAction func createProfile(_ sender: Any){
-        let currentUser = PFUser.current()
-        let user = PFObject(className:"Profile")
-        // adding objects to the user class
-        user ["userBio"] = introTextField.text!
-        user ["workExperience"] = workExperienceTextField.text!
-        user["user"] = currentUser
+        let uid = Auth.auth().currentUser!.uid
+        let ref = Database.database().reference()
         
-        user.saveInBackground {
-        (success: Bool, error: Error?) in
-        if (success) {
-            // The object has been saved.
-        } else {
-            // There was a problem, check error.description
-        }
-    }
+        
+        var dict = [String:Any]()
+        dict.updateValue( introTextField.text!, forKey: "userBio")
+        dict.updateValue( workExperienceTextField.text!, forKey: "workExperience")
+
+
+        let profileRef = ref.child("Profile").child(uid)
+        profileRef.updateChildValues(dict)
+        
+        
+        
+//        let currentUser = PFUser.current()
+//        let user = PFObject(className:"Profile")
+//        // adding objects to the user class
+//        user ["userBio"] = introTextField.text!
+//        user ["workExperience"] = workExperienceTextField.text!
+//        user["user"] = currentUser
+//
+//        user.saveInBackground {
+//        (success: Bool, error: Error?) in
+//        if (success) {
+//            // The object has been saved.
+//        } else {
+//            // There was a problem, check error.description
+//        }
+//    }
     }
     
     func setContinueButton(enabled:Bool) {

@@ -8,6 +8,8 @@
 import UIKit
 import Parse
 import SideMenu
+import Firebase
+import FirebaseAuth
 
 protocol MenuControllerDelegate {
     func didSelectMenuItem(named: SideMenuItem)
@@ -27,7 +29,7 @@ enum SideMenuItem: String, CaseIterable {
 
 class HomeViewController: UIViewController, MenuControllerDelegate {
     private var sideMenu: SideMenuNavigationController?
-    
+
     private let profileController = MainProfileViewController()
     //add other controllers later
     
@@ -44,6 +46,7 @@ class HomeViewController: UIViewController, MenuControllerDelegate {
         SideMenuManager.default.addPanGestureToPresent(toView: view)
         
         addChildControllers()
+
     }
     
     private func addChildControllers() {
@@ -59,6 +62,8 @@ class HomeViewController: UIViewController, MenuControllerDelegate {
     
     @IBAction func didTapMenu() {
         present(sideMenu!, animated: true)
+        
+
     }
     
     func loadLoginScreen(){
@@ -67,9 +72,23 @@ class HomeViewController: UIViewController, MenuControllerDelegate {
         self.present(viewController, animated: true, completion: nil)
     }
     
+    func logout(){
+        let firebaseAuth = Auth.auth()
+        do {
+          try firebaseAuth.signOut()
+        } catch let signOutError as NSError {
+              print("Error signing out: %@", signOutError)
+            let alert = UIAlertController(title: "Error Logging Out", message: signOutError.localizedDescription, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+                print(signOutError)
+            }))
+            self.present(alert, animated: true)
+        }
+    }
+    
     func didSelectMenuItem(named: SideMenuItem) {
         sideMenu?.dismiss(animated: true, completion: nil)
-            
+        performSegue(withIdentifier: "CheckBoxSegue", sender: nil)
         title = named.rawValue
         switch named {
             case .user:
@@ -94,19 +113,8 @@ class HomeViewController: UIViewController, MenuControllerDelegate {
                 performSegue(withIdentifier: "settingsSegue", sender: nil)
                 
             case .logOut:
-                PFUser.logOutInBackground { (error: Error?) in
-                    if (error == nil){
-                        self.loadLoginScreen()
-                    }else{
-                       let alert = UIAlertController(title: "Error Logging Out", message: error?.localizedDescription, preferredStyle: .alert)
-                       alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
-                           print(error.debugDescription)
-                       }))
-                       self.present(alert, animated: true)
-                   }
-
-               }
-                loadLoginScreen()
+                self.logout()
+                
         }
     }
 }

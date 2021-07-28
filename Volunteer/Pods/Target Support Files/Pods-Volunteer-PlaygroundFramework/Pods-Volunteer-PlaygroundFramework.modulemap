@@ -1,0 +1,6 @@
+framework module Pods_Volunteer_PlaygroundFramework {
+  umbrella header "Pods-Volunteer-PlaygroundFramework-umbrella.h"
+
+  export *
+  module * { export * }
+}

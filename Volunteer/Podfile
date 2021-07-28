@@ -11,6 +11,11 @@ target 'Volunteer' do
   pod 'SideMenu'
   pod 'Firebase/Analytics'
   pod 'Firebase/Functions'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Database'
+  pod 'Firebase/Storage'
+  
+  
 
   target 'VolunteerTests' do
     inherit! :search_paths
@@ -20,6 +25,11 @@ target 'Volunteer' do
     pod 'SideMenu'
     pod 'Firebase/Analytics'
     pod 'Firebase/Functions'
+    pod 'Firebase/Auth'
+    pod 'Firebase/Database'
+    pod 'Firebase/Storage'
+    
+    
   end
 
   target 'VolunteerUITests' do
@@ -29,6 +39,21 @@ target 'Volunteer' do
     pod 'SideMenu'
     pod 'Firebase/Analytics'
     pod 'Firebase/Functions'
+    pod 'Firebase/Auth'
+    pod 'Firebase/Database'
+    pod 'Firebase/Storage'
+    
+  end
+  
+  
+  target 'PlaygroundFramework' do
+    # Pods for testing
+    pod 'Firebase/Analytics'
+    pod 'Firebase/Functions'
+    pod 'Firebase/Auth'
+    pod 'Firebase/Database'
+    pod 'Firebase/Storage'
+    
   end
 
 end

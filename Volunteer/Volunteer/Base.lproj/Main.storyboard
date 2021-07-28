@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9fr-RJ-Pme">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9fr-RJ-Pme">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -943,6 +943,7 @@ Find events near you!</string>
                         <outlet property="passwordField" destination="m2O-w1-94p" id="cco-v8-hH8"/>
                         <outlet property="signuphereButton" destination="9cP-QE-34g" id="cz4-Yg-N1R"/>
                         <segue destination="0RQ-LD-Xp2" kind="show" identifier="LoginSegue" id="1nB-qq-pfv"/>
+                        <segue destination="Wjj-Fv-RHd" kind="show" identifier="CheckBoxSegue" id="k3g-Mg-1TW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mni-xy-bbh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1837,6 +1838,82 @@ Find events near you!</string>
             </objects>
             <point key="canvasLocation" x="4642.0289855072469" y="147.99107142857142"/>
         </scene>
+        <!--Check Box Test View Controller-->
+        <scene sceneID="Gdg-II-Z2l">
+            <objects>
+                <viewController storyboardIdentifier="CheckBoxViewController" id="Wjj-Fv-RHd" customClass="CheckBoxTestViewController" customModule="Volunteer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xor-Fy-Xfq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CheckBox Page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Frl-kB-rKa">
+                                <rect key="frame" x="114" y="120" width="165" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6HI-Ms-b9E">
+                                <rect key="frame" x="19.5" y="141" width="375" height="667"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="667" id="oxC-Nw-JBV"/>
+                                    <constraint firstAttribute="width" constant="375" id="pct-fO-6c3"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CheckBoxCell" rowHeight="100" id="kKn-5M-Un3">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kKn-5M-Un3" id="5ng-Ok-hKq">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sx8-lw-70c">
+                                                    <rect key="frame" x="10" y="0.0" width="59" height="50"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pcs-nc-bu2">
+                                                    <rect key="frame" x="315" y="0.0" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="fQM-AZ-MVk"/>
+                                                        <constraint firstAttribute="height" constant="50" id="kXe-Td-DDn"/>
+                                                    </constraints>
+                                                    <state key="normal" image="Checkmarkempty"/>
+                                                    <state key="selected" image="Checkmark"/>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Sx8-lw-70c" firstAttribute="top" secondItem="Pcs-nc-bu2" secondAttribute="top" id="0j9-VU-LUK"/>
+                                                <constraint firstItem="Sx8-lw-70c" firstAttribute="bottom" secondItem="Pcs-nc-bu2" secondAttribute="bottom" id="BYk-GI-R26"/>
+                                                <constraint firstAttribute="trailing" secondItem="Pcs-nc-bu2" secondAttribute="trailing" constant="10" id="DtV-RA-nop"/>
+                                                <constraint firstItem="Sx8-lw-70c" firstAttribute="top" secondItem="5ng-Ok-hKq" secondAttribute="top" id="eAb-cU-3sJ"/>
+                                                <constraint firstItem="Sx8-lw-70c" firstAttribute="leading" secondItem="5ng-Ok-hKq" secondAttribute="leading" constant="10" id="nYO-Hy-rSc"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="no1-9q-AwR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6HI-Ms-b9E" firstAttribute="centerX" secondItem="Xor-Fy-Xfq" secondAttribute="centerX" id="ApQ-xY-Q8i"/>
+                            <constraint firstItem="Frl-kB-rKa" firstAttribute="leading" secondItem="no1-9q-AwR" secondAttribute="leading" constant="114" id="D3a-Ym-awa"/>
+                            <constraint firstItem="no1-9q-AwR" firstAttribute="bottom" secondItem="6HI-Ms-b9E" secondAttribute="bottom" id="M1u-ru-XDb"/>
+                            <constraint firstItem="6HI-Ms-b9E" firstAttribute="top" secondItem="Frl-kB-rKa" secondAttribute="bottom" id="dqK-P8-BEz"/>
+                            <constraint firstItem="no1-9q-AwR" firstAttribute="trailing" secondItem="Frl-kB-rKa" secondAttribute="trailing" constant="135" id="imW-ov-sWm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="OvP-6j-n3Q"/>
+                    <connections>
+                        <outlet property="CheckBoxTableView" destination="6HI-Ms-b9E" id="NiE-ej-CwB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5vT-jQ-8Hc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="473.91304347826093" y="-1006.4732142857142"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="yId-VA-fAr"/>
@@ -1845,6 +1922,8 @@ Find events near you!</string>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="+18" width="598" height="600"/>
+        <image name="Checkmark" width="30" height="30"/>
+        <image name="Checkmarkempty" width="30" height="30"/>
         <image name="Logo_OutReach" width="665" height="133"/>
         <image name="OutReachLogo" width="500" height="500"/>
         <image name="arrow.backward.circle" catalog="system" width="128" height="121"/>

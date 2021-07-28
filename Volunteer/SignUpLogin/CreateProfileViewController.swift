@@ -8,6 +8,9 @@
 import Foundation
 import UIKit
 import Parse
+import Firebase
+import FirebaseDatabase
+import FirebaseAuth
 
 class CreateProfileViewController:UIViewController, UITextFieldDelegate {
     
@@ -58,21 +61,40 @@ class CreateProfileViewController:UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func createProfile(_ sender: Any){
-        let currentUser = PFUser.current()
-        let user = PFObject(className:"Profile")
-        user ["jobTitle"] = jobTitleTextField.text!
-        user ["city"] = cityTextField.text!
-        user["zipCode"] = zipCodeTextField.text!
-        user["user"] = currentUser
         
-        user.saveInBackground {
-            (success: Bool, error: Error?) in
-            if (success) {
-                // The object has been saved.
-            } else {
-                // There was a problem, check error.description
-            }
-        }
+        
+//        let currentUser = PFUser.current()
+        let uid = Auth.auth().currentUser!.uid
+
+        let ref = Database.database().reference()
+        
+        var dict = [String:Any]()
+        dict.updateValue( jobTitleTextField.text!, forKey: "jobTitle")
+        dict.updateValue( cityTextField.text!, forKey: "city")
+        dict.updateValue( zipCodeTextField.text!, forKey: "zipCode")
+        dict.updateValue( educationLevelField.text!, forKey: "educationLevel")
+
+        let profileRef = ref.child("Profile").child(uid)
+        profileRef.updateChildValues(dict)
+        
+
+        
+        
+        
+//        let user = PFObject(className:"Profile")
+//        user ["jobTitle"] = jobTitleTextField.text!
+//        user ["city"] = cityTextField.text!
+//        user["zipCode"] = zipCodeTextField.text!
+//        user["user"] = currentUser
+//
+//        user.saveInBackground {
+//            (success: Bool, error: Error?) in
+//            if (success) {
+//                // The object has been saved.
+//            } else {
+//                // There was a problem, check error.description
+//            }
+//        }
     }
     
     
@@ -271,8 +293,8 @@ extension CreateProfileViewController: UIPickerViewDataSource, UIPickerViewDeleg
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         switch pickerView.tag {
         case 1:
-            PFUser.current()?["educationLevel"] = self.educationLevel[row];
-            PFUser.current()?.saveInBackground()
+//            PFUser.current()?["educationLevel"] = self.educationLevel[row];
+//            PFUser.current()?.saveInBackground()
             educationLevelField.text = educationLevel[row]
             educationLevelField.resignFirstResponder()
         default:

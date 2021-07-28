@@ -7,12 +7,15 @@
 
 import UIKit
 import Parse
+import FirebaseAuth
+import FirebaseDatabase
 
 class SettingsTableViewController: UITableViewController {
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
 
     }
     
@@ -23,18 +26,18 @@ class SettingsTableViewController: UITableViewController {
     }
     
     @IBAction func logOut(_ sender: Any) {
-        PFUser.logOutInBackground { (error: Error?) in
-            if (error == nil){
-                self.loadLoginScreen()
-            }else{
-                let alert = UIAlertController(title: "Error Logging Out", message: error?.localizedDescription, preferredStyle: .alert)
+            let firebaseAuth = Auth.auth()
+            do {
+              try firebaseAuth.signOut()
+            } catch let signOutError as NSError {
+                  print("Error signing out: %@", signOutError)
+                let alert = UIAlertController(title: "Error Logging Out", message: signOutError.localizedDescription, preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
-                   print(error.debugDescription)
+                    print(signOutError)
                 }))
                 self.present(alert, animated: true)
             }
-
-        }
+        
         loadLoginScreen()
     }
 

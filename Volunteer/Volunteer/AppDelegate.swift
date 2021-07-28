@@ -7,6 +7,7 @@
 
 import UIKit
 import Parse
+import Firebase
 
 let primaryColor = UIColor(red: 191/255, green: 238/255, blue: 255/255, alpha: 1)
 let secondaryColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
@@ -16,6 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        //Connect to firebase
+        
+        FirebaseApp.configure()
+        let populate = Populate()
+        populate.test()
+        
         // Settings to connect to the Back4App Servers
         
         let configuration = ParseClientConfiguration {
@@ -24,7 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
             $0.server = "https://parseapi.back4app.com"
         }
         Parse.initialize(with: configuration)
-        
+
         // Configuration of the Parse
         saveInstallationObject()
         
