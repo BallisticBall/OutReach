@@ -25,8 +25,6 @@
 		03A37405260AEA720011DC21 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03A37404260AEA720011DC21 /* Search.storyboard */; };
 		03A3741A260AEDA30011DC21 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03A37419260AEDA30011DC21 /* Settings.storyboard */; };
 		03BC13F625E5C6AD0001E2E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98CC89ED25DCFCA4008E4A7B /* Main.storyboard */; };
-		03BC13FB25E5DAD60001E2E9 /* PassResetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BC13FA25E5DAD60001E2E9 /* PassResetController.swift */; };
-		03F277CD2630FD8D009E3D61 /* EventsTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F277CC2630FD8D009E3D61 /* EventsTabBarController.swift */; };
 		03F2FBAF2602FD13008748E1 /* LegalDocs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03F2FBAE2602FD13008748E1 /* LegalDocs.storyboard */; };
 		03F2FBC52602FD7A008748E1 /* PrivacyPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F2FBC32602FD7A008748E1 /* PrivacyPolicyViewController.swift */; };
 		03F2FBC62602FD7A008748E1 /* ToSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F2FBC42602FD7A008748E1 /* ToSViewController.swift */; };
@@ -57,10 +55,8 @@
 		B152DC1C25E37CCF00A7DB17 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152DC1B25E37CCF00A7DB17 /* SignUpViewController.swift */; };
 		B152DC2425E43EEA00A7DB17 /* ResetPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152DC2325E43EEA00A7DB17 /* ResetPassViewController.swift */; };
 		B152DC2925E43F6400A7DB17 /* CheckEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152DC2825E43F6400A7DB17 /* CheckEmailViewController.swift */; };
-		B152DC2E25E43F9A00A7DB17 /* ChangePassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152DC2D25E43F9A00A7DB17 /* ChangePassViewController.swift */; };
 		B152DC3325E4400800A7DB17 /* VerifyEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152DC3225E4400800A7DB17 /* VerifyEmailViewController.swift */; };
 		B152DC3825E4403100A7DB17 /* GreatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152DC3725E4403100A7DB17 /* GreatViewController.swift */; };
-		B152DC3D25E4404400A7DB17 /* SelectAgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152DC3C25E4404400A7DB17 /* SelectAgeViewController.swift */; };
 		B152DC5125E440F800A7DB17 /* SetupProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152DC5025E440F800A7DB17 /* SetupProfileViewController.swift */; };
 		B152DC5625E4411200A7DB17 /* PrivacySettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152DC5525E4411200A7DB17 /* PrivacySettingViewController.swift */; };
 		B152DC5B25E4416000A7DB17 /* CreateProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152DC5A25E4416000A7DB17 /* CreateProfileViewController.swift */; };
@@ -108,8 +104,6 @@
 		03A37404260AEA720011DC21 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		03A37411260AED200011DC21 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		03A37419260AEDA30011DC21 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
-		03BC13FA25E5DAD60001E2E9 /* PassResetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassResetController.swift; sourceTree = "<group>"; };
-		03F277CC2630FD8D009E3D61 /* EventsTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTabBarController.swift; sourceTree = "<group>"; };
 		03F2FBAE2602FD13008748E1 /* LegalDocs.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LegalDocs.storyboard; sourceTree = "<group>"; };
 		03F2FBC32602FD7A008748E1 /* PrivacyPolicyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyViewController.swift; sourceTree = "<group>"; };
 		03F2FBC42602FD7A008748E1 /* ToSViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToSViewController.swift; sourceTree = "<group>"; };
@@ -156,10 +150,8 @@
 		B152DC1B25E37CCF00A7DB17 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		B152DC2325E43EEA00A7DB17 /* ResetPassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPassViewController.swift; sourceTree = "<group>"; };
 		B152DC2825E43F6400A7DB17 /* CheckEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckEmailViewController.swift; sourceTree = "<group>"; };
-		B152DC2D25E43F9A00A7DB17 /* ChangePassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePassViewController.swift; sourceTree = "<group>"; };
 		B152DC3225E4400800A7DB17 /* VerifyEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyEmailViewController.swift; sourceTree = "<group>"; };
 		B152DC3725E4403100A7DB17 /* GreatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreatViewController.swift; sourceTree = "<group>"; };
-		B152DC3C25E4404400A7DB17 /* SelectAgeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAgeViewController.swift; sourceTree = "<group>"; };
 		B152DC5025E440F800A7DB17 /* SetupProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupProfileViewController.swift; sourceTree = "<group>"; };
 		B152DC5525E4411200A7DB17 /* PrivacySettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacySettingViewController.swift; sourceTree = "<group>"; };
 		B152DC5A25E4416000A7DB17 /* CreateProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileViewController.swift; sourceTree = "<group>"; };
@@ -269,7 +261,6 @@
 				B125CA8526290AF600E01AD5 /* EditEventViewController.swift */,
 				B125CA8A26290B3C00E01AD5 /* VolunteersTableViewCell.swift */,
 				B125CA8F2629317900E01AD5 /* VolunteersTableViewController.swift */,
-				03F277CC2630FD8D009E3D61 /* EventsTabBarController.swift */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -363,7 +354,6 @@
 		B152DBFE25E36FD300A7DB17 /* SignUpLogin */ = {
 			isa = PBXGroup;
 			children = (
-				B152DC2D25E43F9A00A7DB17 /* ChangePassViewController.swift */,
 				B152DC2825E43F6400A7DB17 /* CheckEmailViewController.swift */,
 				032E50392621460B00A59F14 /* CreateProfileAllViewController.swift */,
 				B152DC5F25E4417E00A7DB17 /* CreateProfileContinueViewController.swift */,
@@ -372,10 +362,8 @@
 				B152DC0225E37C6B00A7DB17 /* HelperExtensions.swift */,
 				B152DC0725E37C7E00A7DB17 /* ImageService.swift */,
 				B152DC0C25E37C9100A7DB17 /* LoginViewController.swift */,
-				03BC13FA25E5DAD60001E2E9 /* PassResetController.swift */,
 				B152DC5525E4411200A7DB17 /* PrivacySettingViewController.swift */,
 				B152DC2325E43EEA00A7DB17 /* ResetPassViewController.swift */,
-				B152DC3C25E4404400A7DB17 /* SelectAgeViewController.swift */,
 				B152DC6925E441BC00A7DB17 /* SelectInterestViewController.swift */,
 				B152DC6425E4419F00A7DB17 /* SelectSkillsViewController.swift */,
 				B152DC5025E440F800A7DB17 /* SetupProfileViewController.swift */,
@@ -681,8 +669,6 @@
 				03F2FBC52602FD7A008748E1 /* PrivacyPolicyViewController.swift in Sources */,
 				B152DC1725E37CBE00A7DB17 /* RoundedWhiteButton.swift in Sources */,
 				B152DC6525E4419F00A7DB17 /* SelectSkillsViewController.swift in Sources */,
-				B152DC3D25E4404400A7DB17 /* SelectAgeViewController.swift in Sources */,
-				03BC13FB25E5DAD60001E2E9 /* PassResetController.swift in Sources */,
 				B152DC5625E4411200A7DB17 /* PrivacySettingViewController.swift in Sources */,
 				B152DC2925E43F6400A7DB17 /* CheckEmailViewController.swift in Sources */,
 				0363EF20263A6C5B0044AAE1 /* EditProfileViewController.swift in Sources */,
@@ -705,11 +691,9 @@
 				032E503A2621460B00A59F14 /* CreateProfileAllViewController.swift in Sources */,
 				B125CA7C2628E9DA00E01AD5 /* CreatedEventsTableViewController.swift in Sources */,
 				B125CA8B26290B3C00E01AD5 /* VolunteersTableViewCell.swift in Sources */,
-				03F277CD2630FD8D009E3D61 /* EventsTabBarController.swift in Sources */,
 				B152DC6025E4417E00A7DB17 /* CreateProfileContinueViewController.swift in Sources */,
 				0381BD03260A8E5500168C48 /* AllEventsTableViewController.swift in Sources */,
 				B152DC5B25E4416000A7DB17 /* CreateProfileViewController.swift in Sources */,
-				B152DC2E25E43F9A00A7DB17 /* ChangePassViewController.swift in Sources */,
 				B125CA772628E98E00E01AD5 /* CreatedEventsTableViewCell.swift in Sources */,
 				03A25B97262F6E30008C509F /* SettingsTableViewController.swift in Sources */,
 				B152DC6A25E441BC00A7DB17 /* SelectInterestViewController.swift in Sources */,
