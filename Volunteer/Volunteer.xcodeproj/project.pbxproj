@@ -27,7 +27,6 @@
 		03F2FBC52602FD7A008748E1 /* PrivacyPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F2FBC32602FD7A008748E1 /* PrivacyPolicyViewController.swift */; };
 		03F2FBC62602FD7A008748E1 /* ToSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F2FBC42602FD7A008748E1 /* ToSViewController.swift */; };
 		03F2FBD826030447008748E1 /* Events.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03F2FBD726030447008748E1 /* Events.storyboard */; };
-		1735004926ABD20700CDA989 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1735004826ABD20700CDA989 /* Info.plist */; };
 		1749984B26AC74D000481272 /* Populate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1749984A26AC74D000481272 /* Populate.swift */; };
 		17709A1526ADA5E6007E9B78 /* CheckBoxTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17709A1426ADA5E6007E9B78 /* CheckBoxTestViewController.swift */; };
 		3172CA3F8203E80A15E3723B /* Pods_VolunteerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 925FE17E549E5DEACAABA95C /* Pods_VolunteerTests.framework */; };
@@ -109,7 +108,7 @@
 		1749984A26AC74D000481272 /* Populate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Populate.swift; sourceTree = "<group>"; };
 		17709A1426ADA5E6007E9B78 /* CheckBoxTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxTestViewController.swift; sourceTree = "<group>"; };
 		17FDE72D26ACF1E10077BA67 /* PlaygroundFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlaygroundFramework.h; sourceTree = "<group>"; };
-		17FDE72E26ACF1E10077BA67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17FDE72E26ACF1E10077BA67 /* Playground_Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Playground_Info.plist; sourceTree = "<group>"; };
 		1C361E8663E17DB86252A39F /* Pods-Volunteer-VolunteerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Volunteer-VolunteerUITests.release.xcconfig"; path = "Target Support Files/Pods-Volunteer-VolunteerUITests/Pods-Volunteer-VolunteerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5BBF486254AF5EDB4FE84A37 /* Pods-Volunteer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Volunteer.debug.xcconfig"; path = "Target Support Files/Pods-Volunteer/Pods-Volunteer.debug.xcconfig"; sourceTree = "<group>"; };
 		65FB6FC0F12736E3F9E9130E /* Pods_Volunteer_PlaygroundFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Volunteer_PlaygroundFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,10 +125,10 @@
 		98CC89F325DCFCA5008E4A7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		98CC89FA25DCFCA6008E4A7B /* VolunteerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VolunteerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		98CC89FE25DCFCA6008E4A7B /* VolunteerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolunteerTests.swift; sourceTree = "<group>"; };
-		98CC8A0025DCFCA6008E4A7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		98CC8A0025DCFCA6008E4A7B /* Volunteer_Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Volunteer_Info.plist; sourceTree = "<group>"; };
 		98CC8A0525DCFCA6008E4A7B /* VolunteerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VolunteerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		98CC8A0925DCFCA6008E4A7B /* VolunteerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolunteerUITests.swift; sourceTree = "<group>"; };
-		98CC8A0B25DCFCA6008E4A7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		98CC8A0B25DCFCA6008E4A7B /* VolunteerUI_Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = VolunteerUI_Info.plist; sourceTree = "<group>"; };
 		9DE31A9E7B103DBD7312E4E3 /* Pods-Volunteer-PlaygroundFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Volunteer-PlaygroundFramework.release.xcconfig"; path = "Target Support Files/Pods-Volunteer-PlaygroundFramework/Pods-Volunteer-PlaygroundFramework.release.xcconfig"; sourceTree = "<group>"; };
 		9E7472CEAE76EF1A03265E59 /* Pods_Volunteer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Volunteer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B125CA762628E98E00E01AD5 /* CreatedEventsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatedEventsTableViewCell.swift; sourceTree = "<group>"; };
@@ -265,7 +264,7 @@
 			isa = PBXGroup;
 			children = (
 				17FDE72D26ACF1E10077BA67 /* PlaygroundFramework.h */,
-				17FDE72E26ACF1E10077BA67 /* Info.plist */,
+				17FDE72E26ACF1E10077BA67 /* Playground_Info.plist */,
 			);
 			path = PlaygroundFramework;
 			sourceTree = "<group>";
@@ -323,7 +322,7 @@
 			isa = PBXGroup;
 			children = (
 				98CC89FE25DCFCA6008E4A7B /* VolunteerTests.swift */,
-				98CC8A0025DCFCA6008E4A7B /* Info.plist */,
+				98CC8A0025DCFCA6008E4A7B /* Volunteer_Info.plist */,
 			);
 			path = VolunteerTests;
 			sourceTree = "<group>";
@@ -332,7 +331,7 @@
 			isa = PBXGroup;
 			children = (
 				98CC8A0925DCFCA6008E4A7B /* VolunteerUITests.swift */,
-				98CC8A0B25DCFCA6008E4A7B /* Info.plist */,
+				98CC8A0B25DCFCA6008E4A7B /* VolunteerUI_Info.plist */,
 			);
 			path = VolunteerUITests;
 			sourceTree = "<group>";
@@ -503,7 +502,6 @@
 				7A893BB9262BA33C006EC6EC /* Profile.storyboard in Resources */,
 				98CC89F125DCFCA5008E4A7B /* Assets.xcassets in Resources */,
 				03F2FBD826030447008748E1 /* Events.storyboard in Resources */,
-				1735004926ABD20700CDA989 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,7 +8,6 @@ target 'Volunteer' do
   # Pods for Volunteer
   pod 'Parse'
   pod 'AlamofireImage'
-  pod 'SideMenu'
   pod 'Firebase/Analytics'
   pod 'Firebase/Functions'
   pod 'Firebase/Auth'
@@ -22,7 +21,6 @@ target 'Volunteer' do
     # Pods for testing
     pod 'Parse'
     pod 'AlamofireImage'
-    pod 'SideMenu'
     pod 'Firebase/Analytics'
     pod 'Firebase/Functions'
     pod 'Firebase/Auth'
