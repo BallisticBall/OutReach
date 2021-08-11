@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		032AAB70263354F100CE0F91 /* UpdateEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032AAB6F263354F100CE0F91 /* UpdateEmailViewController.swift */; };
 		032E503A2621460B00A59F14 /* CreateProfileAllViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032E50392621460B00A59F14 /* CreateProfileAllViewController.swift */; };
-		035BEE632613D3D400015ADC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035BEE622613D3D400015ADC /* HomeViewController.swift */; };
 		0363EF20263A6C5B0044AAE1 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035BEE672613D58100015ADC /* EditProfileViewController.swift */; };
 		0363EF21263A6C5F0044AAE1 /* MainProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035BEE6C2613D59800015ADC /* MainProfileViewController.swift */; };
 		0363EF23263A6E450044AAE1 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0363EF22263A6E450044AAE1 /* ChangePasswordViewController.swift */; };
@@ -21,7 +20,6 @@
 		0381BCFE260A8E4800168C48 /* MyEventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0381BCFD260A8E4800168C48 /* MyEventsTableViewController.swift */; };
 		0381BD03260A8E5500168C48 /* AllEventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0381BD02260A8E5500168C48 /* AllEventsTableViewController.swift */; };
 		03A25B97262F6E30008C509F /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A25B96262F6E30008C509F /* SettingsTableViewController.swift */; };
-		03A37400260AE9430011DC21 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03A373FF260AE9430011DC21 /* Home.storyboard */; };
 		03A37405260AEA720011DC21 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03A37404260AEA720011DC21 /* Search.storyboard */; };
 		03A3741A260AEDA30011DC21 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03A37419260AEDA30011DC21 /* Settings.storyboard */; };
 		03BC13F625E5C6AD0001E2E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98CC89ED25DCFCA4008E4A7B /* Main.storyboard */; };
@@ -88,7 +86,6 @@
 /* Begin PBXFileReference section */
 		032AAB6F263354F100CE0F91 /* UpdateEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UpdateEmailViewController.swift; path = Settings/UpdateEmailViewController.swift; sourceTree = SOURCE_ROOT; };
 		032E50392621460B00A59F14 /* CreateProfileAllViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileAllViewController.swift; sourceTree = "<group>"; };
-		035BEE622613D3D400015ADC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = Home/HomeViewController.swift; sourceTree = SOURCE_ROOT; };
 		035BEE672613D58100015ADC /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EditProfileViewController.swift; path = Profile/EditProfileViewController.swift; sourceTree = SOURCE_ROOT; };
 		035BEE6C2613D59800015ADC /* MainProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainProfileViewController.swift; path = Profile/MainProfileViewController.swift; sourceTree = SOURCE_ROOT; };
 		0363EF22263A6E450044AAE1 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
@@ -100,7 +97,6 @@
 		0381BCFD260A8E4800168C48 /* MyEventsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEventsTableViewController.swift; sourceTree = "<group>"; };
 		0381BD02260A8E5500168C48 /* AllEventsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllEventsTableViewController.swift; sourceTree = "<group>"; };
 		03A25B96262F6E30008C509F /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsTableViewController.swift; path = Settings/SettingsTableViewController.swift; sourceTree = SOURCE_ROOT; };
-		03A373FF260AE9430011DC21 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		03A37404260AEA720011DC21 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		03A37411260AED200011DC21 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		03A37419260AEDA30011DC21 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
@@ -209,14 +205,6 @@
 			path = Search;
 			sourceTree = "<group>";
 		};
-		03A3740A260AEA860011DC21 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				035BEE622613D3D400015ADC /* HomeViewController.swift */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
 		03A37429260AEF870011DC21 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
@@ -288,7 +276,6 @@
 				1749984926AC749A00481272 /* FirebaseActions */,
 				0367F9F22623845E000CBE37 /* _Buttons */,
 				B152DBFE25E36FD300A7DB17 /* SignUpLogin */,
-				03A3740A260AEA860011DC21 /* Home */,
 				03F2FBDF260304AB008748E1 /* Events */,
 				03A37429260AEF870011DC21 /* Profile */,
 				03A37409260AEA7F0011DC21 /* Search */,
@@ -322,7 +309,6 @@
 				98CC89ED25DCFCA4008E4A7B /* Main.storyboard */,
 				98CC89F225DCFCA5008E4A7B /* LaunchScreen.storyboard */,
 				98CC89F025DCFCA5008E4A7B /* Assets.xcassets */,
-				03A373FF260AE9430011DC21 /* Home.storyboard */,
 				03F2FBD726030447008748E1 /* Events.storyboard */,
 				03A37411260AED200011DC21 /* Profile.storyboard */,
 				03A37404260AEA720011DC21 /* Search.storyboard */,
@@ -512,7 +498,6 @@
 				03BC13F625E5C6AD0001E2E9 /* Main.storyboard in Resources */,
 				03F2FBAF2602FD13008748E1 /* LegalDocs.storyboard in Resources */,
 				98CC89F425DCFCA5008E4A7B /* LaunchScreen.storyboard in Resources */,
-				03A37400260AE9430011DC21 /* Home.storyboard in Resources */,
 				03A37405260AEA720011DC21 /* Search.storyboard in Resources */,
 				03A3741A260AEDA30011DC21 /* Settings.storyboard in Resources */,
 				7A893BB9262BA33C006EC6EC /* Profile.storyboard in Resources */,
@@ -687,7 +672,6 @@
 				0367FA082623EAFE000CBE37 /* SearchTableViewController.swift in Sources */,
 				0381BCF1260A8DA900168C48 /* AllEventsTableViewCell.swift in Sources */,
 				B125CA902629317A00E01AD5 /* VolunteersTableViewController.swift in Sources */,
-				035BEE632613D3D400015ADC /* HomeViewController.swift in Sources */,
 				032E503A2621460B00A59F14 /* CreateProfileAllViewController.swift in Sources */,
 				B125CA7C2628E9DA00E01AD5 /* CreatedEventsTableViewController.swift in Sources */,
 				B125CA8B26290B3C00E01AD5 /* VolunteersTableViewCell.swift in Sources */,
