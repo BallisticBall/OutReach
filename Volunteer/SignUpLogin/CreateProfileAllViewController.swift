@@ -159,13 +159,6 @@ class CreateProfileAllViewController: UIViewController, UITextFieldDelegate, UII
         }
 
         profileRef.updateChildValues(dict)
-
-    
-        
-        
-        
-
-        
         
 //        let currentUser = PFUser.current()
 //            self.profile["jobTitle"] = jobTitleTextField.text!
@@ -418,14 +411,4 @@ extension CreateProfileAllViewController: UIPickerViewDataSource, UIPickerViewDe
         }
     }
 }
-//class dropDownBtn: UIButton {
-//    override init(frame: CGRect) {
-//        super.init(frame: frame)
-//
-//    }
-//
-//    required init?(coder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
-//}
 

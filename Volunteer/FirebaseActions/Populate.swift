@@ -9,18 +9,18 @@ import Foundation
 import Firebase
 import FirebaseDatabase
 
-
+//MARK: Populate Class
 class Populate {
 
     let educationLevel = ["High School Graduate", "Some College", "Associate Degree", "Bachelor's Degree", "Master's Degree", "Higher Degree"]
 
     let interestTags = ["Animal Welfare", "Childcare", "Community Development", "Education", "Elderly care", "Health/Wellness", "Home Improvement", "Other", "Poverty/Hunger", "Religion", "Technology","Testing123"]
 
+    // 
     let ref = Database.database().reference()
     init() {
+        
     }
-    
-
     
     func fetchData2(completion: @escaping(([String:Any]) ->())){
         
@@ -49,6 +49,7 @@ class Populate {
         }
         
     }
+    //Closures example
     func fetchData(dbref: DatabaseReference,completion: @escaping(([String:Any]) ->())){
         
         var data : [String:Any] = [:]
@@ -89,6 +90,7 @@ class Populate {
             }
         }
     }
+    
     func fetchTags(){
         let userRef = ref.child("interest-tags")
         fetchData(dbref:userRef) { tags in
@@ -96,8 +98,6 @@ class Populate {
         }
     }
     
-    
-
     func addTags(){
         
     }
